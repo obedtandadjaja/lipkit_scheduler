@@ -3,7 +3,7 @@ Website Check Scheduler
 
 A RoR app running on Heroku that checks an e-commerce website whether the item is available or not.
 
-Specifically checking http://shop.kyliecosmetics.com/products/candy-k and http://shop.kyliecosmetics.com/products/koko-k that got sold out in 3 minutes.
+Specifically checking http://shop.kyliecosmetics.com/products/candy-k and http://shop.kyliecosmetics.com/products/koko-k if they are available every 5 minutes. Why am I doing this? I am bored and I am helping a friend and maybe I can make money from these. The last time they were available, they sold out in 3 minutes. They are sold for north of $60 on Ebay but originally they are sold for $29.
 
 Using Watir and phantomjs to visit the website and then parse the HTML elements using Nokogiri and wrap it around a custom rake task. Then using Heroku add-on, Heroku Scheduler, I set it to run the custom rake task every 10 minutes, which is its lowest cycle for free accounts. Because I want it to run every 5 minutes, I set two schedulers running the same custom rake task every 10 minutes: the first running every _0 minutes, and the other one running every _5 minutes.
 
