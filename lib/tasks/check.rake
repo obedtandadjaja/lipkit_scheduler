@@ -8,6 +8,7 @@ namespace :abc do
 		browser.goto 'http://shop.kyliecosmetics.com/products/candy-k'
 		page_html = Nokogiri::HTML.parse(browser.html)
 		entry = page_html.css('#AddToCart')
+		puts entry.include?("Unavailable")
 		if entry.include?("Unavailable")
 			MailgunMailer.lipkit_notification("Candy-K").deliver
 		end
