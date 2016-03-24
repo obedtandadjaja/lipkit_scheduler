@@ -9,7 +9,7 @@ namespace :abc do
 		page_html = Nokogiri::HTML.parse(browser.html)
 		entry = page_html.css('#AddToCart')
 		entry.each do |element|
-			if element.text.include?("Unavailable")
+			if !element.text.include?("Unavailable")
 				MailgunMailer.lipkit_notification("Candy-K").deliver
 			end
 		end
@@ -19,7 +19,7 @@ namespace :abc do
 		page_html = Nokogiri::HTML.parse(browser.html)
 		entry = page_html.css('#AddToCart')
 		entry.each do |element|
-			if element.text.include?("Unavailable")
+			if !element.text.include?("Unavailable")
 				MailgunMailer.lipkit_notification("Koko-K").deliver
 			end
 		end
