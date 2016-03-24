@@ -9,6 +9,6 @@ class MailgunMailer < ApplicationMailer
 
   def lipkit_notification(lipkit)
   	@record = lipkit
-    mail to: "5594737555@tmomail.net", subject: "#{lipkit}"
+    mail to: "obed.tandadjaja@covenant.edu", subject: "#{lipkit}"
   end
 end
