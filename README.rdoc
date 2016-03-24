@@ -1,28 +1,10 @@
-== README
+=
+Website Check Scheduler
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A RoR app running on Heroku that checks an e-commerce website whether the item is available or not.
 
-Things you may want to cover:
+Specifically checking http://shop.kyliecosmetics.com/products/candy-k and http://shop.kyliecosmetics.com/products/koko-k that got sold out in 3 minutes.
 
-* Ruby version
+Using Watir and phantomjs to visit the website and then parse the HTML elements using Nokogiri and wrap it around a custom rake task. Then using Heroku add-on, Heroku Scheduler, I set it to run the custom rake task every 10 minutes, which is its lowest cycle for free accounts. Because I want it to run every 5 minutes, I set two schedulers running the same custom rake task every 10 minutes: the first running every _0 minutes, and the other one running every _5 minutes.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+I will use this RoR app for other scheduler purposes in the future.
