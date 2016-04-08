@@ -12,11 +12,11 @@ namespace :abc do
 		prices = []
 		entry.each do |element|
 			html = element.text
-			html.sub!(/\D/, "")
-			p = html.to_f
-			prices << p
+			# html.sub!(/\D/, "")
+			# p = html.to_f
+			# prices << p
 			puts p
 		end
-		MailgunMailer.protein_notification("#{prices[0]}").deliver
+		# MailgunMailer.protein_notification("#{prices[0]}").deliver
 	end
 end
