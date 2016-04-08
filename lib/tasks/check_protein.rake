@@ -14,7 +14,7 @@ namespace :abc do
 		html.sub!(/\D/, "")
 		p = html.to_f
 		if p < 50.0
-			MailgunMailer.protein_notification("#{prices[0]}").deliver
+			MailgunMailer.protein_notification("#{html}").deliver
 		end
 	end
 end
