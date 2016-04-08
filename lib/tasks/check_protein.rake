@@ -10,13 +10,12 @@ namespace :abc do
 		page_html = Nokogiri::HTML.parse(browser.html)
 		entry = page_html.css('.a-color-price')
 		prices = []
-		entry.each do |element|
-			html = element.text
-			# html.sub!(/\D/, "")
-			# p = html.to_f
-			# prices << p
-			puts html
-		end
+		element = entry[0]
+		html = element.text
+		# html.sub!(/\D/, "")
+		# p = html.to_f
+		# prices << p
+		puts html
 		# MailgunMailer.protein_notification("#{prices[0]}").deliver
 	end
 end
