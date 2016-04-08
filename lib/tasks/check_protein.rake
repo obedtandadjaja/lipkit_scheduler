@@ -15,7 +15,7 @@ namespace :abc do
 			# html.sub!(/\D/, "")
 			# p = html.to_f
 			# prices << p
-			puts p
+			puts html
 		end
 		# MailgunMailer.protein_notification("#{prices[0]}").deliver
 	end
