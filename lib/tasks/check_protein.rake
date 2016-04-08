@@ -13,9 +13,9 @@ namespace :abc do
 			html = element.text
 			html = html.sub!(/^\D*\.\D*$/, "")
 			p = html.to_f
-			if p < 50.0
+			# if p < 50.0
 				MailgunMailer.protein_notification("#{p}").deliver
-			end
+			# end
 		end
 	end
 end
