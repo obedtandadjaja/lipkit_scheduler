@@ -7,4 +7,6 @@ Specifically checking http://shop.kyliecosmetics.com/products/candy-k and http:/
 
 Using Watir and phantomjs to visit the website and then parse the HTML elements using Nokogiri and wrap it around a custom rake task. Then using Heroku add-on, Heroku Scheduler, I set it to run the custom rake task every 10 minutes, which is its lowest cycle for free accounts. Because I want it to run every 5 minutes, I set two schedulers running the same custom rake task every 10 minutes: the first running every _0 minutes, and the other one running every _5 minutes.
 
+Now also checking http://www.amazon.com/gp/product/B000GIPJ0M/ref=s9_simh_gw_g121_i1_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=desktop-3&pf_rd_r=1JTBRNDA7E4M58J1VTJS&pf_rd_t=36701&pf_rd_p=2084660942&pf_rd_i=desktop every hour to check if the price has dropped or not. If it goes below $40, which is my budget, then it will notify me through my email.
+
 I will use this RoR app for other scheduler purposes in the future.
