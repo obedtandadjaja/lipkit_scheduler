@@ -13,7 +13,7 @@ namespace :abc do
 		html = element.text
 		html.sub!(/\D/, "")
 		p = html.to_f
-		if p < 50.0
+		if p < 40.0
 			MailgunMailer.protein_notification("#{html}").deliver
 		end
 	end
