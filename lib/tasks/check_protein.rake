@@ -12,7 +12,7 @@ namespace :abc do
 		prices = []
 		entry.each do |element|
 			html = element.text
-			html = html.sub!(/^\D*\.\D*$/, "")
+			html.sub!(/\D/, "")
 			p = html.to_f
 			prices << p
 			puts p
