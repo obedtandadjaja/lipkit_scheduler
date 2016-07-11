@@ -6,7 +6,7 @@ namespace :abc do
 		require 'nokogiri'
 
 		browser = Watir::Browser.new :phantomjs
-		browser.goto 'http://www.amazon.com/gp/product/B000GIPJ0M/ref=s9_simh_gw_g121_i1_r?ie=UTF8&fpl=fresh&pf_rd_m=ATVPDKIKX0DER&pf_rd_s=desktop-3&pf_rd_r=1JTBRNDA7E4M58J1VTJS&pf_rd_t=36701&pf_rd_p=2084660942&pf_rd_i=desktop'
+		browser.goto 'https://www.amazon.com/Optimum-Nutrition-Serious-Banana-Pound/dp/B002DYIZPS/ref=sr_1_1_s_it?s=hpc&ie=UTF8&qid=1468269375&sr=1-1&keywords=optimum+nutrition+serious+mass+banana'
 		page_html = Nokogiri::HTML.parse(browser.html)
 		entry = page_html.css('.a-color-price')
 		element = entry[0]
