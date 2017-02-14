@@ -1,5 +1,4 @@
-=
-Website Check Scheduler
+=Website Check Scheduler
 
 A RoR app running on Heroku that checks an e-commerce website whether the item is available or not.
 
